@@ -24,6 +24,9 @@ h1, h2, h3, p {
 ul {
   padding-left: 0;
 }
+img {
+  display: block;
+}
 .hidden {
   display: none;
 }
@@ -44,6 +47,7 @@ ul {
 /* Navigation style */
 .main-nav {
   display: flex;
+  border-bottom: 0.5px solid #F4F4FD
 }
 .main-nav .item + .item {
   margin-left: 40px;
@@ -149,7 +153,19 @@ ul {
 }
 
 /* Section style */
-.section-title {
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.section-not-padding {
+  padding-top: 120px;
+  padding-bottom: 0;
+}
+.section-portfolio {
+  padding-top: 0;
+  padding-bottom: 120px;
+}
+  .section-title {
   color: var(--headings-color);
 
   font-size: 36px;
@@ -170,8 +186,8 @@ ul {
 }
 .features-list {
   display: flex;
-  padding-top: 120px;
-  padding-bottom: 120px;
+
+
 }
 .features-list .item {
     width: 264px;
@@ -179,13 +195,28 @@ ul {
 .features-list .item + .item {
     margin-left: 24px;
 }
+
+/* Our Work */
 .work-list {
+  display: flex;
   margin-top: 72px;
+}
+.work-list .item + .item {
+  margin-left: 24px;
 }
 
 /* Our employees */
+.employees-list {
+  display: flex;
+  margin-top: 72px;
+  text-align: center;
+}
+.employees-list .item + .item {
+  margin-left: 24px;
+}
 .employees-list .title {
   color: var(--headings-color);
+  margin-top: 32px;
 
   font-size: 20px;
   letter-spacing: 0.02em;
@@ -193,8 +224,23 @@ ul {
 }
 
 /* Projects style */
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.projects-list .item {
+  width: calc((100%-48px)/3);
+  padding-bottom: 32px;
+  margin-right: 24px;
+  margin-bottom: 48px;
+  border-bottom: 0.5px solid #F4F4FD
+}
+.projects-list .item:nth-child(3n) {
+  margin-right: 0;
+}
 .projects-list .title {
   color: var(--headings-color);
+  margin-top: 32px;
 
   font-size: 20px;
   letter-spacing: 0.02em;
@@ -222,9 +268,16 @@ ul {
 }
 .footer {
   background: var(--headings-color);
+
+}
+.footer .container {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .footer .text {
   color: #e7e9fc;
+  width: 264px;
+  margin-top: 16px;
 }
 
 /* Позиціонування елементів */
@@ -235,7 +288,6 @@ ul {
   padding-right: 15px;
   width: 1158px;
 
-  outline: 2px solid crimson;
 }
 
 /* Portfolio Filter */
