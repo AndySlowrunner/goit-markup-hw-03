@@ -44,10 +44,13 @@ img {
   color: var(--primery-color);
 }
 
+.header {
+  border-bottom: 0.5px solid var(--headings-color)
+}
+
 /* Navigation style */
 .main-nav {
   display: flex;
-  border-bottom: 0.5px solid #F4F4FD
 }
 .main-nav .item + .item {
   margin-left: 40px;
@@ -101,11 +104,12 @@ img {
 }
 .hero-title {
   color: var(--primery-white-color);
-  width: 495px;
+  width: 492px;
   margin-left: auto;
   margin-right: auto;
   
   font-size: 56px;
+  font-weight: 500;
   line-height: 1.07;
   letter-spacing: 0.02em;
 }
@@ -162,7 +166,7 @@ img {
   padding-bottom: 0;
 }
 .section-portfolio {
-  padding-top: 0;
+  padding-top: 96px;
   padding-bottom: 120px;
 }
   .section-title {
@@ -216,11 +220,14 @@ img {
 }
 .employees-list .title {
   color: var(--headings-color);
-  margin-top: 32px;
-
+  
   font-size: 20px;
   letter-spacing: 0.02em;
   line-height: 1.2;
+}
+.box {
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 /* Projects style */
@@ -228,23 +235,28 @@ img {
   display: flex;
   flex-wrap: wrap;
 }
+
 .projects-list .item {
-  width: calc((100%-48px)/3);
-  padding-bottom: 32px;
+  width: calc((100% - 48px)/3);
   margin-right: 24px;
   margin-bottom: 48px;
-  border-bottom: 0.5px solid #F4F4FD
 }
 .projects-list .item:nth-child(3n) {
   margin-right: 0;
 }
+.projects-list .item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
 .projects-list .title {
   color: var(--headings-color);
-  margin-top: 32px;
 
   font-size: 20px;
   letter-spacing: 0.02em;
   line-height: 1.2;
+}
+.project-list-box {
+  padding: 32px 16px;
+  border: 0.5px solid var(--headings-color)
 }
 
 /* Features, Employees and Projects style */
@@ -270,13 +282,15 @@ img {
   background: var(--headings-color);
 
 }
-.footer .container {
+.footer {
   padding-top: 100px;
   padding-bottom: 100px;
 }
 .footer .text {
   color: #e7e9fc;
   width: 264px;
+  line-height: 1.5;
+
   margin-top: 16px;
 }
 
@@ -294,7 +308,7 @@ img {
 .filter-list {
   display: flex;
   justify-content: center;
-  padding-top: 96px;
+  
   padding-bottom: 72px;
 }
 .filter-list .item + .item {
